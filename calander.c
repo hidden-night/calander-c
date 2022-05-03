@@ -2,9 +2,9 @@
 
 const int n_months[]={31,28,31,30,31,30,31,31,30,31,30,31};
 
-enum bool{false,true};
+typedef enum{false,true}bool;
 
-enum bool leap_year(int year)
+bool leap_year(int year)
 {
 	if (year%400==0)
 		return true;
@@ -68,7 +68,7 @@ void print_calander(int month,int year)
 	}
 }
 
-enum bool valid(int month,int year)
+bool valid(int month,int year)
 {
 	if (year<1 || month<1 || month>12)
 		return false;
